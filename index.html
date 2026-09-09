@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandal Modern - Toko Sandal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #f5b942;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(
+                rgba(0,0,0,0.5),
+                rgba(0,0,0,0.5)
+            ),
+            url("https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=1200&q=80");
+
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #f5b942;
+            color: #222;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #e0a52f;
+        }
+
+        /* Produk */
+        .produk {
+            padding: 50px 8%;
+        }
+
+        .produk h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 30px;
+        }
+
+        .produk-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 15px 0 8px;
+        }
+
+        .card p {
+            padding: 0 15px;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        .harga {
+            display: block;
+            margin: 15px 0;
+            font-size: 20px;
+            font-weight: bold;
+            color: #d88b00;
+        }
+
+        /* Tentang */
+        .tentang {
+            background-color: #222;
+            color: white;
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        .tentang h2 {
+            margin-bottom: 15px;
+        }
+
+        .tentang p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .produk-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>SandalKu</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#produk">Produk</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div>
+            <h2>Sandal Modern & Stylish</h2>
+            <p>Nyaman digunakan, modern untuk menunjang penampilan.</p>
+            <a href="#produk" class="btn">Lihat Produk</a>
+        </div>
+    </section>
+
+    <!-- Produk -->
+    <section class="produk" id="produk">
+        <h2>Produk Sandal Kami</h2>
+
+        <div class="produk-container">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=600&q=80"
+                     alt="Sandal Modern Casual">
+
+                <h3>Sandal Casual</h3>
+
+                <p>
+                    Sandal dengan desain sederhana dan modern,
+                    cocok digunakan untuk aktivitas sehari-hari.
+                </p>
+
+                <span class="harga">Rp75.000</span>
+
+                <a href="#" class="btn">Beli Sekarang</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1562273138-f46be4ebdf33?auto=format&fit=crop&w=600&q=80"
+                     alt="Sandal Fashion">
+
+                <h3>Sandal Fashion</h3>
+
+                <p>
+                    Memiliki desain kekinian dan nyaman dipakai
+                    untuk jalan-jalan maupun acara santai.
+                </p>
+
+                <span class="harga">Rp95.000</span>
+
+                <a href="#" class="btn">Beli Sekarang</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"
+                     alt="Sandal Premium">
+
+                <h3>Sandal Premium</h3>
+
+                <p>
+                    Sandal berkualitas dengan tampilan elegan,
+                    nyaman dan cocok untuk berbagai kesempatan.
+                </p>
+
+                <span class="harga">Rp120.000</span>
+
+                <a href="#" class="btn">Beli Sekarang</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Tentang -->
+    <section class="tentang" id="tentang">
+        <h2>Tentang SandalKu</h2>
+
+        <p>
+            SandalKu menyediakan berbagai macam sandal modern
+            dengan desain menarik, nyaman digunakan, dan harga
+            yang terjangkau. Kami berusaha memberikan produk
+            berkualitas untuk memenuhi kebutuhan pelanggan.
+        </p>
+    </section>
+
+    <!-- Kontak -->
+    <section class="tentang" id="kontak">
+        <h2>Hubungi Kami</h2>
+
+        <p>
+            WhatsApp: 08xxxxxxxxxx<br>
+            Instagram: @sandalku<br>
+            Email: sandalku@gmail.com
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SandalKu. Semua Hak Dilindungi.</p>
+    </footer>
+
+</body>
+  </html>
